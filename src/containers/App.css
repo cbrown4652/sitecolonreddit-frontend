@@ -1,0 +1,18 @@
+.title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3em;
+  font-weight: 200;
+  color: #000000;
+  padding: 1em;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.halfWidth {
+  display: flex;
+  width: 50vw
+}

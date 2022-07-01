@@ -1,0 +1,29 @@
+.searchResult {
+    border-radius: 10px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 350;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    margin: 1em;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    word-break: break-word;
+    border: 0;
+}
+
+.link {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #5E5DF0;
+}
+
+.description {
+    color: black;
+}
