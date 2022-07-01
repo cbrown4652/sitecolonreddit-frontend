@@ -19,7 +19,10 @@ function App() {
   const onSearchClick = (event) => {
     fetch(process.env.APIURL, {
       method: 'put',
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify({
           searchTerms: searchTerms,
           start: "1"
@@ -44,7 +47,10 @@ function App() {
 
     fetch(process.env.APIURL, {
       method: 'put',
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify({
           searchTerms: searchTerms,
           start: startIndex.toString()
