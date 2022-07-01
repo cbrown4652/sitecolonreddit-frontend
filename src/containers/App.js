@@ -17,7 +17,7 @@ function App() {
   }
 
   const onSearchClick = (event) => {
-    fetch(process.env.APIURL, {
+    fetch("https://sitecolonreddit-backend.herokuapp.com/search", {
       method: 'put',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function App() {
   const onLoadMoreClick = (event) => {
     var startIndex = (page * 10) + 1;
 
-    fetch(process.env.APIURL, {
+    fetch("https://sitecolonreddit-backend.herokuapp.com/search", {
       method: 'put',
       headers: {
         'Content-Type': 'application/json',
