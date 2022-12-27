@@ -14,6 +14,7 @@ function App() {
 
   const onSearchChange = (event) => {
     setSearchTerms(event.target.value);
+    setPage(0);
   }
 
   const onSearchClick = (event) => {
