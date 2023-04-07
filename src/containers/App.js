@@ -67,7 +67,7 @@ function App() {
   return (
     <div>
         <h1 className='title center'>sitecolonreddit</h1>
-        <div className='searchBar'>
+        <div className='searchBar center'>
           <SearchBox searchChange={onSearchChange} searchClick={onSearchClick} enterPress={onKeyPress}/>
         </div>
         <div className='center'>
@@ -75,7 +75,7 @@ function App() {
         </div>
         {page > 0 &&
           <div className='center'>
-          <LoadMoreButton loadMoreClick={onLoadMoreClick}/>
+            <LoadMoreButton loadMoreClick={onLoadMoreClick}/>
           </div>
         }
     </div>

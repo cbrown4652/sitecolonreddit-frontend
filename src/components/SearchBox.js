@@ -4,15 +4,23 @@ import './SearchBox.css'
 
 const SearchBox = ({searchChange, searchClick, enterPress}) => {
     return (
-        <div>
-            <input
-                className="searchBox"
-                type="search"
-                placeholder="Search for reddit posts"
-                onChange={searchChange}
-                onKeyPress={enterPress}
-            />
-            <button className="searchButton" onClick={searchClick}>Search</button>
+        <div id="cover">
+            <div className="tb">
+                <div className="td">
+                    <input
+                        type="search"
+                        required
+                        onChange={searchChange}
+                        onKeyPress={enterPress}
+                    />
+                </div>
+                <div className="td" id="s-cover">
+                    <button type="submit" onClick={searchClick}>
+                    <div id="s-circle"></div>
+                    <span></span>
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }
