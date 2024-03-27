@@ -25,7 +25,8 @@ export default function SearchInput({ searchTerms, setSearchTerms, setSearchResu
         .then(data => {
             setSearchResults(data);
             setPage(1);
-            });
+            })
+        .catch(err => console.error(err));
     }
 
     return (

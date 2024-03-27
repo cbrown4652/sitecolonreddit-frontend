@@ -25,7 +25,8 @@ export default function LoadMoreButton({ page, setPage, searchResults, setSearch
         .then(data => {
             setSearchResults(searchResults.concat(data));
             setPage(page + 1);
-        });
+        })
+        .catch(err => console.error(err));
     }
 
     return (
