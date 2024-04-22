@@ -10,7 +10,7 @@ interface Props {
 
 export default function SearchInput({ searchTerms, setSearchTerms, setSearchResults, setPage }: Props){
     const handleSearch = () => {
-        fetch("https://sitecolonreddit-backend.onrender.com/search", {
+        fetch("https://sitecolonreddit-backend-go.onrender.com/search", {
         method: 'put',
         headers: {
             'Content-Type': 'application/json',
