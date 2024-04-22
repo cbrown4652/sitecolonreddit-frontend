@@ -13,7 +13,7 @@ export default function LoadMoreButton({ page, setPage, searchResults, setSearch
     const handleLoadMore = () => {
         var startIndex = (page * 10) + 1;
 
-        fetch("https://sitecolonreddit-backend.onrender.com/search", {
+        fetch("https://sitecolonreddit-backend-go.onrender.com/search", {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
