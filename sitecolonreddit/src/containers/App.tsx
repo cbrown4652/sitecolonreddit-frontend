@@ -16,16 +16,16 @@ function App() {
   const [page, setPage] = useState<number>(0)
 
   return (
-    <>
+    <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center' minHeight='100vh' mb={6}>
       <Box display='flex' flexDirection='column' alignItems='center' mb={6}>
-        <Typography variant='h2'>sitecolonreddit</Typography>
+        <Typography variant='h2' mb={2}>sitecolonreddit</Typography>
         <SearchInput searchTerms={searchTerms} setSearchTerms={setSearchTerms} setSearchResults={setSearchResults} setPage={setPage} />
       </Box>
-      <Box>
+      <Box width='100%' display='flex' flexDirection='column' alignItems='center'>
         <SearchResultsList searchResults={searchResults}/>
         {page > 0 && <LoadMoreButton page={page} setPage={setPage} searchResults={searchResults} setSearchResults={setSearchResults} searchTerms={searchTerms}/>}
       </Box>
-    </>
+    </Box>
   )
 }
 

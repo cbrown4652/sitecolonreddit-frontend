@@ -9,8 +9,8 @@ interface Props {
 export default function SearchResultsList({ searchResults }: Props) {
     return (
         <Grid container spacing={2} mb={6}>
-            {searchResults.map((searchResult) => (
-                <Grid item xs={12}>
+            {searchResults.map((searchResult, index) => (
+                <Grid item xs={12} key={index}>
                     <SearchResultCard searchResult={searchResult} />
                 </Grid>
             ))}

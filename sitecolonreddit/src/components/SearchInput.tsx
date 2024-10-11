@@ -32,7 +32,7 @@ export default function SearchInput({ searchTerms, setSearchTerms, setSearchResu
     return (
         <Paper
           component="form"
-          sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, boxShadow: 6}}
+          sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, boxShadow: 6, borderRadius: '30px'}}
           onSubmit={(e) => {
             e.preventDefault();
             handleSearch();
@@ -46,11 +46,11 @@ export default function SearchInput({ searchTerms, setSearchTerms, setSearchResu
           />
           <IconButton
             type="button"
-            sx={{ p: '10px' }}
+            sx={{ p: '10px', color: '#4B0082', '&:hover': { backgroundColor: '#E6E6FA' }   }}
             aria-label="search"
             onClick={handleSearch}
           >
-            <SearchIcon />
+            <SearchIcon sx={{ fontSize: 30 }} />
           </IconButton>
         </Paper>
     )
