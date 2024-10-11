@@ -1,5 +1,6 @@
 import { Paper, InputBase, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { useTheme } from '@mui/material/styles'
 
 interface Props {
     searchTerms: string;
@@ -9,6 +10,8 @@ interface Props {
 }
 
 export default function SearchInput({ searchTerms, setSearchTerms, setSearchResults, setPage }: Props){
+    const theme = useTheme();
+
     const handleSearch = () => {
         fetch("https://sitecolonreddit-backend-go.onrender.com/search", {
         method: 'put',
@@ -46,7 +49,14 @@ export default function SearchInput({ searchTerms, setSearchTerms, setSearchResu
           />
           <IconButton
             type="button"
-            sx={{ p: '10px', color: '#4B0082', '&:hover': { backgroundColor: '#E6E6FA' }   }}
+            sx={{ 
+              p: '10px', 
+              color: theme.palette.primary.main, 
+              '&:hover': { 
+                color: theme.palette.primary.main,
+                backgroundColor: theme.palette.secondary.main 
+              },
+            }}
             aria-label="search"
             onClick={handleSearch}
           >
