@@ -1,5 +1,6 @@
 import { Grid, Button } from "@mui/material";
 import { SearchResult } from "../models/SearchResult";
+import { useTheme } from '@mui/material/styles';
 
 interface Props {
     page: number;
@@ -10,6 +11,8 @@ interface Props {
 }
 
 export default function LoadMoreButton({ page, setPage, searchResults, setSearchResults, searchTerms}: Props) {
+    const theme = useTheme();
+
     const handleLoadMore = () => {
         var startIndex = (page * 10) + 1;
 
@@ -31,7 +34,18 @@ export default function LoadMoreButton({ page, setPage, searchResults, setSearch
 
     return (
         <Grid container spacing={2} justifyContent="center" mb={6}>
-            <Button variant="contained" color="primary" onClick={handleLoadMore}>
+            <Button
+                variant="contained"
+                sx={{
+                    backgroundColor: theme.palette.primary.main,
+                    borderRadius: '10px',
+                    fontSize: '1.1rem',
+                    '&:hover': {
+                        backgroundColor: theme.palette.primary.main,
+                    },
+                }}
+                onClick={handleLoadMore}
+            >
                 Load More
             </Button>
         </Grid>

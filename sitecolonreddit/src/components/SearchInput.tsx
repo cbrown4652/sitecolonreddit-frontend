@@ -35,14 +35,30 @@ export default function SearchInput({ searchTerms, setSearchTerms, setSearchResu
     return (
         <Paper
           component="form"
-          sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, boxShadow: 6, borderRadius: '30px'}}
+          sx={{ 
+            p: '2px 4px', 
+            display: 'flex', 
+            alignItems: 'center', 
+            width: 400, 
+            backgroundColor: theme.palette.primary.main,
+            boxShadow: 6, 
+            borderRadius: '10px'}}
           onSubmit={(e) => {
             e.preventDefault();
             handleSearch();
           }}
         >
           <InputBase
-            sx={{ ml: 1, flex: 1 }}
+            sx={{ 
+              ml: 1, 
+              flex: 1, 
+              color: 'white',
+              fontSize: '1.2rem',
+              fontWeight: 'bold',
+              '&::placeholder': {
+                color: 'rgba(255, 255, 255, 0.7)',
+              },
+            }}
             placeholder="Search Reddit"
             inputProps={{ 'aria-label': 'search reddit' }}
             onChange={(e) => setSearchTerms(e.target.value)}
@@ -51,7 +67,7 @@ export default function SearchInput({ searchTerms, setSearchTerms, setSearchResu
             type="button"
             sx={{ 
               p: '10px', 
-              color: theme.palette.primary.main, 
+              color: 'rgba(255, 255, 255, 0.7)', 
               '&:hover': { 
                 color: theme.palette.primary.main,
                 backgroundColor: theme.palette.secondary.main 
