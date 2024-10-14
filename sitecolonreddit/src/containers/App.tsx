@@ -5,7 +5,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
-import { useTheme } from '@mui/material/styles'
 import SearchInput from '../components/SearchInput';
 import SearchResultsList from '../components/SearchResultsList';
 import { SearchResult } from '../models/SearchResult';
