@@ -12,7 +12,6 @@ import { SearchResult } from '../models/SearchResult';
 import LoadMoreButton from '../components/LoadMoreButton';
 
 function App() {
-  const theme = useTheme();
   const [searchTerms, setSearchTerms] = useState<string>('')
   const [searchResults, setSearchResults] = useState<SearchResult[]>([])
   const [page, setPage] = useState<number>(0)
